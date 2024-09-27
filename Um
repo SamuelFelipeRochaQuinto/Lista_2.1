@@ -1,0 +1,40 @@
+//Exercicio 1
+
+import java.util.Scanner;
+
+class Um {
+  
+  void um(Scanner entrada) {
+    
+    Integer maior_nota = 0;
+    String num_matricula = "";
+    Integer seg_maior_nota = 0;
+    String seg_num_matricula = "";
+    
+    System.out.println();
+    
+    for (int i = 1 ; i <= 100 ; i++) {
+      
+      System.out.print("Informe o n° de matrícula do " + i + "° aluno: ");
+      entrada.skip("[\r\n]");
+      String matricula = entrada.nextLine();
+      
+      System.out.print("Informe a nota do " + i + "° aluno: ");
+      int nota = entrada.nextInt();
+      
+      if(nota > maior_nota){
+        
+        seg_maior_nota = maior_nota;
+        seg_num_matricula = num_matricula;
+        
+        maior_nota = nota;
+        num_matricula = matricula;
+        
+      }
+    }
+    
+    System.out.println("A maior nota foi: " + maior_nota + " pts do aluno de matrícula: " + num_matricula);
+    System.out.println("A segunda maior nota foi: " + seg_maior_nota + " pts do aluno de matrícula: " + seg_num_matricula + "\n");
+    
+  }
+}
