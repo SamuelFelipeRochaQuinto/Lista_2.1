@@ -1,0 +1,58 @@
+//Exercicio 3
+
+import java.util.Scanner;
+
+class Tres {
+  void tres(Scanner entrada) {
+    
+    int pnt_minimo = 0;
+    int pnt_obt = 0;
+    int ano = 2019;
+    
+    System.out.println("Informe seu sexo: \n1.Feminino \n2.Masculino");
+    int sexo = entrada.nextInt();
+    
+    if(sexo == 1 || sexo == 2) {
+    
+      pnt_minimo = 76 + (sexo*10);
+
+      System.out.print("Tempo de contribuição em 2019: ");
+      int tempo = entrada.nextInt();
+
+      System.out.print("Idade em 2019: ");
+      int idade = entrada.nextInt();
+
+      pnt_obt = (idade + tempo);
+
+      System.out.printf("Sexo: %d \nTempo de contribuição: %d \nIdade em 2019: %d", sexo , tempo , idade);
+      System.out.println("\nAno | Pont. Min. | Pont. Obitida");
+
+      while(true) {
+
+        System.out.println(ano + "|" + pnt_minimo + "|" + pnt_obt);
+        ano++;
+
+        if(pnt_obt >= pnt_minimo) {
+          return;
+        }
+
+        if(pnt_minimo < 95 + (sexo*5)){
+          pnt_minimo++;
+        }
+
+        if(pnt_obt <= 95 + (sexo*5)) {
+          pnt_obt += 2;
+        } 
+
+        if(pnt_obt > 95 + (sexo*5)){
+          pnt_obt = 95 + (sexo*5);
+        }      
+
+      }
+    
+    } else {
+      System.out.println("Opção inválida!");
+    }
+    
+  }
+}
