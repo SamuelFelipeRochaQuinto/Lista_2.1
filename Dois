@@ -1,0 +1,21 @@
+//Exercicio 2
+
+import java.util.Scanner;
+
+class Dois {
+  void dois(Scanner entrada) {
+    
+    System.out.print("Informe o número n: ");
+    int n = entrada.nextInt();
+    System.out.println();
+    
+    for (int i = 1; i <= n; i++) {
+      
+      System.out.print( i + "," + (i+3) + "," + (i+3) + ",");
+      
+    }
+    
+    System.out.println("... \n");
+    
+  }
+}
