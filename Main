@@ -1,0 +1,45 @@
+//Main
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner entrada = new Scanner(System.in);
+    Um um = new Um();
+    Dois dois = new Dois();
+    Tres tres = new Tres();
+
+    while(true) {
+      
+      System.out.println("Selecione a questão desejada: \n1 \n2 \n3 \n4.Sair");
+      int opcao = entrada.nextInt();
+      
+      switch(opcao) {
+          
+        case 1:
+          um.um(entrada);
+          break;
+          
+        case 2:
+          dois.dois(entrada);
+          break;
+          
+        case 3:
+          tres.tres(entrada);
+          break;
+          
+        case 4:
+          System.out.println("Saindo...");
+          return;
+          
+        case 5:
+          System.out.println("Opção inválida! \nReiniciando...");
+          break;
+          
+      }
+      
+    }
+    
+  }
+}
